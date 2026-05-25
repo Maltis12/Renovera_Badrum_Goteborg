@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovera Badrum Göteborg | Experter på Badrumsrenovering</title>
+    <style>
+        /* Modern & Stilren CSS-design */
+        :root {
+            --primary: #1e293b; /* Djup skifferblå */
+            --secondary: #d97706; /* Varm bärnsten/guld för detaljer */
+            --accent: #f59e0b;
+            --text-dark: #334155;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: var(--bg-light);
+        }
+
+        /* Navigering */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .logo-sub {
+            font-size: 12px;
+            color: var(--secondary);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .phone-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(30, 41, 59, 0.15);
+        }
+
+        .phone-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Hero-sektion */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.60)), url('https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=1600') no-repeat center center/cover;
+            color: var(--white);
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            max-width: 800px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            max-width: 650px;
+            color: #e2e8f0;
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 16px 36px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: #b45309;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(217, 119, 6, 0.4);
+        }
+
+        /* Sektioner allmänt */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 0;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        /* Tjänster med Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .service-card .icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Processen (Steg för steg) */
+        .process-section {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-num {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bg-light);
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 0 auto 20px auto;
+        }
+
+        .step h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Recensioner */
+        .reviews-section {
+            background-color: #f1f5f9;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+            position: relative;
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .review-card p {
+            font-style: italic;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .reviewer {
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reviewer::before {
+            content: "";
+            width: 15px;
+            height: 2px;
+            background-color: var(--secondary);
+            display: inline-block;
+        }
+
+        .badge {
+            background-color: #dcfce7;
+            color: #15803d;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        /* Info & ROT-Sektion */
+        .info-block {
+            background: linear-gradient(135deg, var(--primary), #0f172a);
+            color: var(--white);
+            padding: 60px;
+            border-radius: 16px;
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .info-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .info-text p {
+            color: #cbd5e1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 80px 8% 30px 8%;
+            font-size: 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-section p {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #1e293b;
+            font-size: 13px;
+        }
+
+        /* Responsiv design */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; padding: 20px; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .container { width: 90%; padding: 50px 0; }
+            .info-block { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span class="logo-main">Renovera Badrum</span>
+            <span class="logo-sub">Göteborg • Professionell Byggfirma</span>
+        </div>
+        <a href="tel:0730418479" class="phone-btn">📞 Ring 073-041 84 79</a>
+    </header>
+
+    <section class="hero">
+        <h1>Vi förverkligar dina badrumsdrömmar i Göteborg</h1>
+        <p>Går du i renoveringstankar? Vi är en erfaren byggfirma specialiserad på kompletta badrumsrenoveringar och plattsättning med fokus på trygghet, kvalitet och fasta priser.</p>
+        <a href="tel:0730418479" class="cta-btn">Boka kostnadsfritt hembesök</a>
+    </section>
+
+    <section class="container">
+        <div class="section-intro">
+            <h2 class="section-title">Våra Tjänster</h2>
+            <p class="section-subtitle">Vi erbjuder högkvalitativa bygg- och renoveringstjänster i hela Göteborgsområdet med behöriga hantverkare.</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="icon">🚿</span>
+                <h3>Totalentreprenad Badrum</h3>
+                <p>Vi tar ett helhetsansvar för din badrumsrenovering. Det innebär att vi samordnar allt från rivning, snickeri och VVS till elinstallationer och plattsättning. Du har en enda kontaktperson under hela projektet vilket sparar både tid och energi.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon">🧱</span>
+                <h3>Plattsättning & Kökskakel</h3>
+                <p>Letar du efter en noggrann plattsättare? Vi utför professionell montering av kakel, klinker och mosaik i både kök och badrum. Vi garanterar spikraka linjer, perfekt fall mot brunnen och ett resultat som lyfter hela hemmet.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon">🛡️</span>
+                <h3>Våtrumssäkring & Tätskikt</h3>
+                <p>Ett vackert badrum är ingenting värt om inte underarbetet är perfekt. Vi arbetar strikt enligt gällande branschregler för våtrum och ser till att ditt tätskikt är 100 % tätt, så att du kan känna dig helt trygg mot framtida fuktskador.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <div class="section-intro">
+                <h2 class="section-title">Så här fungerar det</h2>
+                <p class="section-subtitle">Att renovera ska inte vara krångligt. Vi har tagit fram en tydlig arbetsprocess i fyra enkla steg.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4>Fri Offert</h4>
+                    <p>Vi träffas för ett kostnadsfritt hembesök där vi går igenom dina önskemål och förutsättningar på plats.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4>Tydlig Plan</h4>
+                    <p>Du får en specificerad offert med fast pris och en tidsplan så att du vet exakt vad som ingår.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4>Byggfasen</h4>
+                    <p>Våra skickliga hantverkare utför arbetet effektivt, rent och med högsta noggrannhet.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h4>Slutbesiktning</h4>
+                    <p>Vi går gemensamt igenom det färdiga resultatet och du får alla kvalitetsdokument i handen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container reviews-section" style="max-width: 100%; width: 100%;">
+        <div class="container" style="padding: 40px 0;">
+            <div class="section-intro">
+                <h2 class="section-title">Vad våra kunder säger</h2>
+                <p class="section-subtitle">Med ett snittbetyg på 4,7 stjärnor på Google sätter vi alltid kundnöjdheten i första rummet.</p>
+            </div>
+            
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Uppsättning av kakel i kök. Snyggt, inget att klaga på."</p>
+                    <div class="reviewer">
+                        Renée Gustafsson
+                        <span class="badge">Verifierad</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Fantastiskt bra byggföretag. Snabba svarstider, Punktlighet, Kvalitet i varje detalj."</p>
+                    <div class="reviewer">
+                        Badrums Konsult
+                        <span class="badge">Verifierad</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Mycket nöjd. Snabba svarstider, Punktlighet, Kvalitet, Värde för pengarna."</p>
+                    <div class="reviewer">
+                        badrums fixaren
+                        <span class="badge">Verifierad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="info-block">
+            <div class="info-text">
+                <h3>Spara pengar med ROT-avdraget</h3>
+                <p>Som privatperson har du rätt till ROT-avdrag, vilket innebär att du kan dra av 30 % av arbetskostnaden direkt på fakturan. Vi sköter allt pappersarbete med Skatteverket så att du slipper krångel. Kontakta oss så räknar vi ut din exakta besparing!</p>
+            </div>
+            <a href="tel:0730418479" class="cta-btn" style="box-shadow: none;">Ring oss direkt</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Om Byggfirman</h4>
+                <p>Renovera Badrum Göteborg är det trygga valet för privatpersoner och företag i Göteborg. Vi kombinerar gediget hantverk med modern design och personlig service. Vårt mål är att överträffa dina förväntningar.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontaktuppgifter</h4>
+                <p>📍 <strong>Adress:</strong> Styrfarten 20, 417 65 Göteborg</p>
+                <p>📞 <strong>Telefon:</strong> <a href="tel:0730418479">073-041 84 79</a></p>
+                <p>🌐 <strong>Område:</strong> Göteborg med omnejd</p>
+            </div>
+            <div class="footer-section">
+                <h4>Öppettider & Info</h4>
+                <p>Måndag: Enligt tidsbokning</p>
+                <p>Tisdag: 09:00 - 17:00</p>
+                <p>Onsdag - Fredag: 09:00 - 17:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Renovera Badrum Göteborg. Alla rättigheter reserverade. Organiserat och byggt enligt gällande branschstandarder.
+        </div>
+    </footer>
+
+</body>
+</html>
